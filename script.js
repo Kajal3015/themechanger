@@ -5,9 +5,17 @@ let modal1=document.querySelector("body");
 
 for(let i=0;i<colorArr.length;i++){
     colorArr[i].addEventListener("click",function(){
-         modal.style.backgroundColor = color[i];
-         modal.style.color="white";
-         modal.style.border="2px solid white"
-         modal1.style.backgroundColor = color[i];
+        if(colorArr[i].classList.contains("blue") || colorArr[i].classList.contains("black")){
+            modal.style.backgroundColor = color[i];
+            modal.style.color="white";
+            modal.style.border="2px solid white"
+            modal1.style.backgroundColor = color[i];
+        }else{
+            modal.style.backgroundColor = color[i];
+            modal.style.color="black";
+            modal.style.border="2px solid black";
+            modal1.style.backgroundColor = color[i];
+        }
+         
     })
 }
